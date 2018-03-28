@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">president</string>
+    <string name="app_name">大统领Trump</string>
+    <string name="drawer_item_home">首页</string>
+    <string name="drawer_item_news">新闻</string>
+    <string name="drawer_item_twitter">推特治国</string>
+    <string name="drawer_item_weekly_address">每周演讲</string>
+    <string name="drawer_item_settings">设置</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

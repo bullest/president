@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#202020</color>
+    <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="textPrimary">#FFFFFF</color>
+    <color name="textSecondary">#DFDFDF</color>
+
+    <!-- OVERWRITE THESE COLORS FOR A LIGHT THEME -->
+    <!-- MaterialDrawer DEFAULT colors -->
+    <color name="material_drawer_background">#202020</color>
+    <!-- Material DEFAULT text / items colors -->
+    <color name="material_drawer_primary_text">#DFDFDF</color>
+    <color name="material_drawer_primary_icon">#DFDFDF</color>
+    <color name="material_drawer_secondary_text">#DFDFDF</color>
+    <color name="material_drawer_hint_text">#DFDFDF</color>
+    <color name="material_drawer_divider">#303030</color>
+    <!-- Material DEFAULT drawer colors -->
+    <color name="material_drawer_selected">#101010</color>
+    <color name="material_drawer_selected_text">#2196F3</color>
 </resources>
