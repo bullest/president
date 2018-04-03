@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.bullest.president.home.HomeFragment;
+import com.bullest.president.news.NewsFragment;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -49,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void configDrawer() {
         new DrawerBuilder().withActivity(this).build();
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.drawer_item_home);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName(R.string.drawer_item_news);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName(R.string.drawer_item_twitter);
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName(R.string.drawer_item_home).withIcon(R.drawable.trump);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName(R.string.drawer_item_twitter).withIcon(R.drawable.trumtter);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName(R.string.drawer_item_news).withIcon(R.drawable.news);
         PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName(R.string.drawer_item_weekly_address);
 
         drawer = new DrawerBuilder()
@@ -80,11 +81,12 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case 2:
                                 fragment = new TwitterFragment();
-                                mToolbar.setTitle(getString(R.string.drawer_item_news));
+                                mToolbar.setTitle(getString(R.string.drawer_item_twitter));
                                 break;
                             case 4:
-                                fragment = new TwitterFragment();
-                                mToolbar.setTitle(getString(R.string.drawer_item_twitter));
+                                fragment = new NewsFragment();
+                                mToolbar.setTitle(getString(R.string.drawer_item_news));
+
                         }
 
                         if (fragment != null) {

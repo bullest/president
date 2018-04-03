@@ -13,16 +13,16 @@ import com.bullest.president.R;
  * Created by yunfezhang on 3/27/18.
  */
 
-public class TwitterItem extends LinearLayout {
+public class TwitterItemView extends LinearLayout {
     TextView twitter_cn, twitter_en, twitter_time;
     ImageView twitterImage;
 
-    public TwitterItem(Context context) {
+    public TwitterItemView(Context context) {
         super(context);
         init(context);
     }
 
-    public TwitterItem(Context context, AttributeSet attributeSet) {
+    public TwitterItemView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         init(context);
     }

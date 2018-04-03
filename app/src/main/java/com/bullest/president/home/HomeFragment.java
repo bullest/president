@@ -2,6 +2,7 @@ package com.bullest.president.home;
 
 import android.arch.lifecycle.Observer;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,10 +10,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.bullest.president.R;
+import com.bullest.president.twitter.TwitterActivity;
 import com.bullest.president.twitter.TwitterData;
-import com.bullest.president.twitter.TwitterItem;
+import com.bullest.president.twitter.TwitterItemView;
 
 import java.util.List;
 
@@ -69,11 +72,20 @@ public class HomeFragment extends Fragment {
     }
 
     private void initTwitterCard(View view) {
-        final TwitterItem twitter = view.findViewById(R.id.home_twitter);
+        final TwitterItemView twitter = view.findViewById(R.id.home_twitter);
+        Button homeTwitterMoreButton = view.findViewById(R.id.home_twitter_more);
+        homeTwitterMoreButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), TwitterActivity.class);
+                startActivity(intent);
+            }
+        });
         HomeTwitterCardViewModel homeTwitterCardViewModel = new HomeTwitterCardViewModel();
         homeTwitterCardViewModel.getTwitterList().observe(this, new Observer<List<TwitterData>>() {
             @Override
             public void onChanged(@Nullable List<TwitterData> twitterData) {
+                if (twitterData != null && !twitterData.isEmpty())
                 twitter.setData(twitterData.get(0));
             }
         });

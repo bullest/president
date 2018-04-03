@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/news_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Title"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="News Title"/>
+
+    <TextView
+        android:id="@+id/news_short_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/textPrimary"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/news_title"
+        tools:text="This is a short news content, please read it carefully. Even it has no any useful information."/>
+
+    <ImageView
+        android:id="@+id/news_source_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/news_short_content"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/news_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@color/textPrimary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/news_short_content"
+        tools:text="2010年1月1号"/>
+
+</android.support.constraint.ConstraintLayout>

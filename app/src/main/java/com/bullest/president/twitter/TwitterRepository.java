@@ -34,7 +34,7 @@ public class TwitterRepository {
     public void updateTwitterList() {
         BmobQuery<TwitterData> query = new BmobQuery<TwitterData>();
         query.setLimit(10);
-        query.findObjects(new FindListener<TwitterData>() {
+        query.order("-createdAt").findObjects(new FindListener<TwitterData>() {
             @Override
             public void done(List<TwitterData> list, BmobException e) {
                 twitterList.setValue(list);
